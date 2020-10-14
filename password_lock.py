@@ -48,7 +48,7 @@ def test_init(self):
         '''
         self.new_user.save_user() # saving the new contact
         self.assertEqual(len(User.user_list),1)
-        
+
 def test_save_multiple_user(self):
             '''
             test_save_multiple_user to check if we can save multiple user
@@ -58,3 +58,16 @@ def test_save_multiple_user(self):
             test_user = User("Test","user","asdfgh890",) # new contact
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
+  # setup and class creation up here
+
+# other test cases here
+    def test_delete_user(self):
+            '''
+            test_delete_user to test if we can remove a user from our user list
+            '''
+            self.new_user.save_user()
+            test_user = User("Test","user","asdfgh890",) # new contact
+            test_user.save_user()
+
+            self.new_user.delete_user()# Deleting a contact object
+            self.assertEqual(len(User.user_list),1)
