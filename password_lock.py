@@ -53,3 +53,9 @@ def __init__(self,first_name,last_name,password):
                     return True
 
         return False
+@classmethod
+    def display_users(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.user_list
