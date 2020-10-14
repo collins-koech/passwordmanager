@@ -71,3 +71,16 @@ def test_save_multiple_user(self):
 
             self.new_user.delete_user()# Deleting a contact object
             self.assertEqual(len(User.user_list),1)
+
+def test_find_user_by_password(self):
+        '''
+        test to check if we can find a user by phone password and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Test","user","asdfgh8901",) # new contact
+        test_user.save_user()
+
+        found_user = User.find_by_password("asdfgh8901")
+
+        self.assertEqual(found_user.first_name,test_user.first_name)
