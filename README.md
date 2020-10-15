@@ -17,7 +17,7 @@ Pass Safe lets you manage your login credentials using the CLI.Pass safe also al
 
  Open your terminal and run the following command:
 
--   git clone 'https://github.com/collins-koech/passwordmanager.git' && cd python-ip1
+-   git clone 'https://github.com/collins-koech/passwordmanager.git' 
 -   on terminal run the command ./run.py
 
 

@@ -46,14 +46,14 @@ def check_existing_users(password):
 
 
 def main():
-    print("Hello Welcome to your Password Locker. What is your name?")
+    print("Hello Welcome to your Password Manager. What is your name?")
     user_name = input()
 
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
 
     while True:
-            print("Use these short codes : nw - New User, du - display users, log -log in, ex -exit the Password Locker")
+            print("Use these short codes : nw - New User, du - display users, log -log in, ex -exit the Password Manager")
 
             short_code = input().lower()
 

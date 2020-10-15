@@ -19,13 +19,13 @@ def __init__(self,first_name,last_name,password):
         self.last_name = last_name
         self.password = password
 
-    def delete_user(self):
+def delete_user(self):
 
         '''
         delete_contact method
         '''
         User.user_list.remove(self)
- @classmethod
+@classmethod
     def find_by_password(cls,password):
         '''
         Method that takes in a password and returns a contact that matches that password.

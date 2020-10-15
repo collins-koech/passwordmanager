@@ -7,7 +7,7 @@ class User:
     class that generates new instances of Users
     """
     user_list = []
-    def save_user(self):
+def save_user(self):
 
         '''
         save_contact method saves contact objects into contact_list
@@ -22,12 +22,12 @@ def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("James","Muriuki","asdfgh890") # create contact object
+        self.new_user = User("Caleb","Rutto","kli876@99") # create contact object
 def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("James","Muriuki","asdfgh890") # create contact object
+        self.new_user = User("Caleb","Rutto","kli876@99") # create contact object
 
     def tearDown(self):
         '''
@@ -39,9 +39,9 @@ def test_init(self):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.first_name,"James")
-        self.assertEqual(self.new_user.last_name,"Muriuki")
-        self.assertEqual(self.new_user.password,"asdfgh890")
+        self.assertEqual(self.new_user.first_name,"Caleb")
+        self.assertEqual(self.new_user.last_name,"Rutto")
+        self.assertEqual(self.new_user.password,"kli876@99")
 
     def test_save_user(self):
         '''
@@ -57,7 +57,7 @@ def test_save_multiple_user(self):
             objects to our user_list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","asdfgh890",) # new contact
+            test_user = User("Test","user","kli876@99",) # new contact
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
   # setup and class creation up here
@@ -68,7 +68,7 @@ def test_save_multiple_user(self):
             test_delete_user to test if we can remove a user from our user list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","asdfgh890",) # new contact
+            test_user = User("Test","user","kli876@99",) # new contact
             test_user.save_user()
 
             self.new_user.delete_user()# Deleting a contact object
@@ -80,10 +80,10 @@ def test_find_user_by_password(self):
         '''
 
         self.new_user.save_user()
-        test_user = User("Test","user","asdfgh8901",) # new contact
+        test_user = User("Test","user","kli876@991",) # new contact
         test_user.save_user()
 
-        found_user = User.find_by_password("asdfgh8901")
+        found_user = User.find_by_password("kli876@991")
 
         self.assertEqual(found_user.first_name,test_user.first_name)
 def test_user_exists(self):
@@ -92,10 +92,10 @@ def test_user_exists(self):
         '''
 
         self.new_user.save_user()
-        test_user = User("Test","user","asdfgh8901",) # new contact
+        test_user = User("Test","user","kli876@991",) # new contact
         test_user.save_user()
 
-        user_exists = User.user_exist("asdfgh8901")
+        user_exists = User.user_exist("kli876@991")
 
         self.assertTrue(user_exists)
  def test_display_all_users(self):
